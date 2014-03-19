@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @shoeform.contact_email %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @shoeform.phone_number %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @shoeform.size %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @shoeform.price %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @shoeform.img_url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @shoeform.description %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @shoeform.condition %>
+</p>
+
+<%= link_to 'Edit', edit_shoeform_path(@shoeform) %> |
+<%= link_to 'Back', shoeforms_path %>

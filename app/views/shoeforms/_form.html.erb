@@ -1,0 +1,53 @@
+<%= form_for(@shoeform) do |f| %>
+  <% if @shoeform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shoeform.errors.count, "error") %> prohibited this shoeform from being saved:</h2>
+
+      <ul>
+      <% @shoeform.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+   <%= f.label :title%><br>
+  <%= f.text_field :title, placeholder: "Title"%>
+  
+</div>
+
+  <div class="field">
+    <%= f.label :contact_email %><br>
+    <%= f.text_field :contact_email, placeholder: "something@something.com", size: 30%>
+    
+  </div>
+  <div class="field">
+    <%= f.label :Contact_Number_Optional%><br>
+    <%= f.text_field :phone_number , placeholder: "2842358583",  :maxlength =>  10, size: 20%>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size , :maxlength => 4, placeholder: "11.5"%>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price , placeholder: "299.99"%>
+  </div>
+  <div class="field">
+    <%= f.label :image_url%><br>
+    <%= f.text_field :img_url, placeholder: "http://www.upscalehype.com/wp-content/uploads/2009/03/yeezy2.jpg", size: 90%>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description , :maxlength => 300, placeholder: "Purchased from, more detailed condition, terms, payment, location, trades, etc."%>
+  </div>
+  <div class="field">
+    <%= f.label :condition %><br>
+    <%= f.text_field :condition, placeholder: "Brand new in box." %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

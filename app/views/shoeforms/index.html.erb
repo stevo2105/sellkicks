@@ -1,0 +1,52 @@
+
+<h1>For Sale</h1>
+<div class="jumbotron">
+  <h1>High-Quality Shoes</h1>
+  <p>Best in quality. Best in style.</p>
+  <p><a class="btn btn-primary btn-lg" role="button" href="/shoeforms/new">New Shoeform</a></p>
+</div>
+<table>
+  <thead>
+  
+      <% @shoeforms.each do |shoeform| %>
+ 
+      <div class="panel panel-default">
+        <div class="panel-body"> <img src=<%= shoeform.img_url%> width=300>
+     
+
+     
+  </div>
+  <div class="panel-footer">
+    Email: <%= shoeform.contact_email %>
+    <p></p>
+    Contact Number: <%= shoeform.phone_number %>
+     <p></p>
+    Size: <%= shoeform.size %>
+     <p></p>
+    Price:   <%= shoeform.price %>
+ <p></p>        
+    Description:  <%= shoeform.description %>
+ <p></p>       
+    Condition: <%= shoeform.condition %>
+     <p></p>
+        <%= link_to 'Show', shoeform %>
+        <%= link_to 'Edit', edit_shoeform_path(shoeform) %>
+        <%= link_to 'Destroy', shoeform, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+
+ 
+      <% end %>
+      
+    
+  </thead>
+
+  <tbody>
+    
+      
+   
+  </tbody>
+</table>
+
+<br>
+
+
